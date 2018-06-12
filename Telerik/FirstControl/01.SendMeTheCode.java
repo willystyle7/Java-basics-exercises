@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class SendMeTheCode {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String number = Integer.toString(Math.abs(scan.nextInt()));
+        String number = scan.nextLine();
+        if (number.charAt(0) == '-'){
+            number = number.substring(1);
+        }
         int result = 0;
         for (int i = 0; i < number.length(); i++) {
             int index = number.length() - i;

@@ -45,13 +45,13 @@ class ExpressionAgain
         Console.WriteLine(counter);
     }
 
-    static int EvaluateExression(string expresion)
+    static int EvaluateExression(string expression)
     {
         int sum = 0;
         string patternNumbers = @"\d+";
         string patternOperators = @"[+*-]{1}";
-        MatchCollection matchesNumbers = Regex.Matches(expresion, patternNumbers);
-        MatchCollection matchesOperators = Regex.Matches(expresion, patternOperators);
+        MatchCollection matchesNumbers = Regex.Matches(expression, patternNumbers);
+        MatchCollection matchesOperators = Regex.Matches(expression, patternOperators);
         sum = int.Parse(matchesNumbers[0].Value);
         for (int i = 1; i < matchesNumbers.Count; i++)
         {

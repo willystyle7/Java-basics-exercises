@@ -7,7 +7,11 @@ class SendMeTheCode
 {
     static void Main()
     {
-        string number = Math.Abs(int.Parse(Console.ReadLine())).ToString();
+        string number = Console.ReadLine();
+        if (number[0] == '-')
+        {
+            number = number.Substring(1);
+        }
         int result = 0;
         for (int i = 0; i < number.Length; i++)
         {
