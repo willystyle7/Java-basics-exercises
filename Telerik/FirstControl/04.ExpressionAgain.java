@@ -35,10 +35,10 @@ public class ExpressionAgain {
         System.out.println(counter);
     }
 
-    static int EvaluateExression(String expresion) {
+    public static int EvaluateExression(String expression) {
         int sum = 0;
-        String[] matchesNumbers = expresion.split("[+*-]{1}");
-        String[] matchesOperators = expresion.split("\\d+");
+        String[] matchesNumbers = expression.split("[+*-]{1}");
+        String[] matchesOperators = expression.split("\\d+");
         matchesNumbers = clean(matchesNumbers);
         matchesOperators = clean(matchesOperators);
         sum = Integer.parseInt(matchesNumbers[0]);
